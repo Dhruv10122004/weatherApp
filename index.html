@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <button id="unit">&degC</button>
+    <select name="" id="sel">
+        <option value="" default>Select any option</option>
+        <option value="today">Today</option>
+        <option value="tomorrow">Tomorrow</option>
+        <option value="next10">Next 10 days</option>
+    </select>
+    <label for="loc">Enter location: <input type="text" id="loc" placeholder="location"><button
+            id="search">Search</button></label>
+    <div class="result">
+        <div id="date"></div>
+        <div id="add"></div>
+        <div id="temp"></div>
+        <div id="cond"></div>
+        <div id="humid"></div>
+        <div id="wind"></div>
+    </div>
+</body>
+
+</html>
