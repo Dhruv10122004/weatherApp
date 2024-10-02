@@ -7,6 +7,7 @@ body {
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    background-color: #f0f8ff; /* Light background color for better contrast */
     transition: background-color 0.5s, color 0.5s;
 }
 
@@ -23,9 +24,8 @@ input[type="text"] {
     border-radius: 5px;
     font-size: 16px;
     margin-bottom: 10px;
-    width: 200px;
+    width: 250px; /* Slightly wider input field */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
 }
 
 button {
@@ -44,49 +44,60 @@ button:hover {
     transform: scale(1.05);
 }
 
-.result {
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.5s, color 0.5s;
-    width: 300px;
-    text-align: center;
+#forecast {
+    margin-top: 20px; /* Space above the forecast section */
+    display: grid; /* Flex display for layout */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    align-items: center; /* Center align the forecasts */
+}
+
+.day-forecast {
+    margin: 10px 0; /* Spacing between forecasts */
+    padding: 15px; /* Inner padding for forecast box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    width: 300px; /* Fixed width for forecasts */
+    text-align: center; /* Center text in forecast */
+    transition: transform 0.3s; /* Animation on hover */
+}
+
+.day-forecast:hover {
+    transform: scale(1.02); /* Slightly scale up on hover for interaction */
 }
 
 .sunny {
-    background-color: #ffeb3b;
+    background-color: #ffeb3b; /* Sunny background */
     color: #333;
 }
 
 .rainy {
-    background-color: #2196F3;
+    background-color: #2196F3; /* Rainy background */
     color: white;
 }
 
 .cloudy {
-    background-color: #9e9e9e;
+    background-color: #9e9e9e; /* Cloudy background */
     color: white;
 }
 
 .snowy {
-    background-color: #ffffff;
+    background-color: #ffffff; /* Snowy background */
     color: #333;
 }
 
 .result h3 {
-    margin: 0 0 10px;
-    font-size: 24px;
+    margin: 0 0 10px; /* Space below title */
+    font-size: 20px; /* Smaller size for the title */
+}
+
+.result h4 {
+    margin: 5px 0; /* Space around the subheading */
+    font-size: 18px; /* Subheading size */
 }
 
 .result p {
-    margin: 5px 0;
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-#sel {
-    margin-bottom: 10px;
-    font-size: large;
-    margin-top: 10px;
+    margin: 5px 0; /* Space around paragraphs */
+    font-size: 16px; /* Paragraph font size */
+    line-height: 1.5; /* Increased line height for readability */
 }
